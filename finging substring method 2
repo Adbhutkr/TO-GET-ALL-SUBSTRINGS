@@ -1,0 +1,45 @@
+For a given input string(str), write a function to print all the possible substrings.
+Substring
+A substring is a contiguous sequence of characters within a string. 
+Example: "cod" is a substring of "coding". Whereas, "cdng" is not as the characters taken are not contiguous
+input:-ADBHUT
+output:-
+A
+D
+B
+H
+U
+T
+AD
+DB
+BH
+HU
+UT
+ADB
+DBH
+BHU
+HUT
+ADBH
+DBHU
+BHUT
+ADBHU
+DBHUT
+ADBHUT
+
+class ques
+{
+ public static void main(String[] args)
+    {
+        String str = "ADBHUT";int n =str.length(); 
+        for(int len = 1;len<=n;len++)
+        {
+            for(int i  = 0;i<=(n-len);i++)
+            {
+                int j = i+len-1;
+                {
+                    System.out.println(str.substring(i,j+1));
+                }
+            }
+        }
+    }
+}
